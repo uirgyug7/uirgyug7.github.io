@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91每日大赛-每日大赛热点内容_91每日大赛热门话题合集</title>
+<meta name="description" content="91每日大赛热点内容首页，汇总每日大赛的热门话题与网络讨论，按日更新内容条目，提供快速浏览与筛选入口，方便读者了解91每日大赛当天被讨论的内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23120f1c'/%3E%3Cpath d='M14 40h8l6-18 8 26 6-16h8' fill='none' stroke='%23ffb703' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14111f;
+  --ink-2:#1e1a2e;
+  --paper:#f6f3ee;
+  --paper-2:#fffdfa;
+  --gold:#ffb703;
+  --gold-deep:#e08e00;
+  --violet:#6b4bd6;
+  --text:#241f33;
+  --muted:#6a6478;
+  --line:#e4ded4;
+  --radius:16px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--text);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{max-width:100%;display:block;}
+.wrap{width:min(1140px,92vw);margin:0 auto;}
+
+/* header */
+.site-head{
+  background:var(--ink);
+  color:#f4f0e8;
+  border-bottom:3px solid var(--gold);
+  position:sticky;top:0;z-index:20;
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:14px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand svg{width:38px;height:38px;flex:none;}
+.brand-text{
+  font-size:20px;font-weight:800;letter-spacing:.5px;color:#fff;
+}
+.brand-text em{color:var(--gold);font-style:normal;}
+nav.main-nav{display:flex;gap:6px;flex-wrap:wrap;}
+nav.main-nav a{
+  font-size:14.5px;padding:7px 13px;border-radius:999px;
+  color:#d9d3e6;transition:.2s;
+}
+nav.main-nav a:hover{background:rgba(255,255,255,.1);color:#fff;}
+nav.main-nav a.active{background:var(--gold);color:#1a1526;font-weight:700;}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(107,75,214,.55),transparent 55%),
+    radial-gradient(circle at 8% 90%,rgba(255,183,3,.22),transparent 50%),
+    var(--ink-2);
+  color:#f6f2ea;padding:52px 0 46px;
+  overflow:hidden;position:relative;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .8fr;gap:38px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:2px;color:var(--gold);
+  border:1px solid rgba(255,183,3,.45);
+  padding:4px 12px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(30px,4.6vw,46px);
+  line-height:1.25;margin:0 0 16px;font-weight:900;letter-spacing:1px;
+}
+h1 span{color:var(--gold);}
+.hero p.lead{
+  font-size:16.5px;color:#cfc8dd;margin:0 0 26px;max-width:36em;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;
+  border:1px solid transparent;transition:.2s;
+}
+.btn-primary{background:var(--gold);color:#1a1526;}
+.btn-primary:hover{background:#ffc93c;}
+.btn-ghost{border-color:rgba(255,255,255,.32);color:#f0ebf8;}
+.btn-ghost:hover{background:rgba(255,255,255,.1);}
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);
+  padding:20px 22px;backdrop-filter:blur(4px);
+}
+.hero-card h2{font-size:15px;margin:0 0 14px;color:var(--gold);letter-spacing:1px;}
+.hero-card ol{margin:0;padding-left:20px;font-size:14.5px;color:#d8d2e6;}
+.hero-card li{margin-bottom:8px;}
+.hero-card li:last-child{margin-bottom:0;}
+.hero-stat{
+  display:flex;gap:22px;margin-top:18px;padding-top:16px;
+  border-top:1px dashed rgba(255,255,255,.18);font-size:13px;color:#b9b2ca;
+}
+.hero-stat b{display:block;color:#fff;font-size:19px;line-height:1.3;}
+
+/* section base */
+section{padding:56px 0;}
+.sec-head{margin-bottom:26px;}
+.sec-head .tag{
+  font-size:12.5px;letter-spacing:2px;color:var(--violet);
+  font-weight:700;text-transform:uppercase;
+}
+.sec-head h2{
+  font-size:clamp(22px,3vw,29px);margin:6px 0 8px;font-weight:800;color:var(--ink);
+}
+.sec-head p{margin:0;color:var(--muted);font-size:15px;max-width:52em;}
+
+/* tools */
+.tools{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+  margin-bottom:28px;
+}
+.tools label{font-size:14px;color:var(--muted);font-weight:600;}
+.tools input[type=search]{
+  flex:1 1 220px;min-width:180px;padding:10px 14px;border-radius:10px;
+  border:1px solid var(--line);background:#fff;font-size:14.5px;color:var(--text);
+  font-family:inherit;
+}
+.tools input[type=search]:focus{outline:2px solid var(--gold);border-color:var(--gold);}
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  font-size:13.5px;padding:6px 14px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;color:var(--muted);
+  cursor:pointer;font-family:inherit;transition:.18s;
+}
+.chip:hover{border-color:var(--gold-deep);color:var(--ink);}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* cards */
+.card-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.card{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px 22px 20px;
+  display:flex;flex-direction:column;gap:10px;
+  transition:.2s;position:relative;overflow:hidden;
+}
+.card::before{
+  content:"";position:absolute;left:0;top:0;width:100%;height:4px;
+  background:linear-gradient(90deg,var(--gold),var(--violet));
+  opacity:0;transition:.2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(30,26,46,.09);}
+.card:hover::before{opacity:1;}
+.card .meta{
+  display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted);
+}
+.card .badge{
+  background:rgba(107,75,214,.1);color:var(--violet);
+  padding:2px 10px;border-radius:999px;font-weight:700;font-size:12px;
+}
+.card h3{font-size:17.5px;margin:0;font-weight:800;line-height:1.5;color:var(--ink);}
+.card p{margin:0;font-size:14.5px;color:#4d4759;}
+.card .foot{
+  margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);
+  font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:10px;
+}
+
+/* split: brief + notes */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start;}
+.article-flow h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+.article-flow h3:first-child{margin-top:0;}
+.article-flow p{margin:0 0 12px;color:#3f3a4d;font-size:15.5px;}
+.article-flow ul{margin:0 0 12px;padding-left:20px;color:#3f3a4d;font-size:15.5px;}
+.article-flow li{margin-bottom:6px;}
+.note-box{
+  background:linear-gradient(160deg,#1e1a2e,#2a2342);
+  color:#e6e1f2;border-radius:var(--radius);padding:26px 24px;
+  border:1px solid rgba(255,183,3,.28);
+}
+.note-box h3{margin:0 0 12px;font-size:17px;color:var(--gold);}
+.note-box p{margin:0 0 12px;font-size:14.5px;color:#cbc4dd;}
+.note-box ul{margin:0;padding-left:18px;font-size:14.5px;color:#cbc4dd;}
+.note-box li{margin-bottom:8px;}
+.note-box .dl{
+  margin-top:18px;display:flex;flex-direction:column;gap:8px;
+}
+.dl-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--gold);color:#1a1526;font-weight:800;font-size:15px;
+  padding:12px 20px;border-radius:12px;
+  pointer-events:none;opacity:.92;
+}
+.dl-hint{font-size:12.5px;color:#a79fc0;text-align:center;}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.step{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;
+}
+.step .num{
+  width:32px;height:32px;border-radius:10px;display:grid;place-items:center;
+  background:var(--ink);color:var(--gold);font-weight:800;font-size:15px;margin-bottom:12px;
+}
+.step h3{font-size:16px;margin:0 0 6px;color:var(--ink);}
+.step p{margin:0;font-size:14px;color:var(--muted);}
+
+/* faq */
+.faq{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 24px;}
+details{border-bottom:1px dashed var(--line);padding:16px 0;}
+details:last-child{border-bottom:none;}
+summary{
+  cursor:pointer;font-weight:700;font-size:16px;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:var(--gold-deep);font-weight:800;font-size:20px;line-height:1;}
+details[open] summary::after{content:"−";}
+details p{margin:10px 0 0;font-size:14.8px;color:#4d4759;}
+
+/* footer */
+.site-foot{
+  background:var(--ink);color:#b9b2ca;padding:38px 0 28px;margin-top:10px;
+  border-top:3px solid var(--gold);
+}
+.foot-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start;}
+.foot-brand{max-width:34em;}
+.foot-brand .brand-text{font-size:17px;margin-bottom:8px;}
+.foot-brand p{margin:0;font-size:13.5px;line-height:1.8;color:#9a93ae;}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap;font-size:13.5px;}
+.foot-links a:hover{color:var(--gold);}
+.copyright{
+  margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);
+  font-size:12.5px;color:#7f7893;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* responsive */
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:28px;}
+  .card-grid{grid-template-columns:repeat(2,1fr);}
+  .split{grid-template-columns:1fr;}
+  .steps{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:600px){
+  body{font-size:15px;}
+  .head-inner{padding:12px 0;}
+  .brand-text{font-size:17px;}
+  nav.main-nav a{font-size:13.5px;padding:6px 10px;}
+  .hero{padding:36px 0 34px;}
+  section{padding:40px 0;}
+  .card-grid{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;}
+  .tools{padding:14px 16px;}
+  .faq{padding:4px 18px;}
+  .hero-stat{gap:16px;flex-wrap:wrap;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top" aria-label="91每日大赛 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#ffb703"/>
+        <path d="M13 41h8l6-19 8 27 6-17h9" fill="none" stroke="#14111f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">91每日大赛</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#today" class="active">今日热点</a>
+      <a href="#list">内容条目</a>
+      <a href="#read">热点解读</a>
+      <a href="#howto">浏览方式</a>
+      <a href="#faq">常见疑问</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="today">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">每日更新 · 热点内容</span>
+        <h1>91每日大赛</h1>
+        <p class="lead">这里把当天被反复讨论的网络热点集中放在一处。91每日大赛以日期为线索整理内容条目，标注话题类别与讨论热度，让你用几分钟就能看清今天大家都在聊什么。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#list">浏览今日条目</a>
+          <a class="btn btn-ghost" href="#read">先读热点解读</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="今日速览">
+        <h2>今日速览</h2>
+        <ol>
+          <li>话题类条目集中在上午更新，傍晚补充后续讨论。</li>
+          <li>每条内容附类别标签，可按标签快速筛选。</li>
+          <li>争议内容只做转述，不替代原帖完整语境。</li>
+        </ol>
+        <div class="hero-stat">
+          <div><b>6</b>今日条目</div>
+          <div><b>4</b>话题类别</div>
+          <div><b>按日</b>归档方式</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- LIST -->
+  <section id="list">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Today's Entries</span>
+        <h2>91每日大赛今日条目</h2>
+        <p>以下条目按当天讨论出现的先后排列，类别标签用于区分内容类型。搜索框与标签按钮可以直接筛选下方卡片。</p>
+      </div>
+
+      <div class="tools">
+        <label for="q">筛选条目</label>
+        <input type="search" id="q" placeholder="输入关键词，如 讨论、图片、争议" autocomplete="off">
+        <div class="chips" role="group" aria-label="类别筛选">
+          <button class="chip on" data-cat="all" type="button">全部</button>
+          <button class="chip" data-cat="讨论" type="button">讨论</button>
+          <button class="chip" data-cat="图片" type="button">图片</button>
+          <button class="chip" data-cat="争议" type="button">争议</button>
+          <button class="chip" data-cat="合集" type="button">合集</button>
+        </div>
+      </div>
+
+      <div class="card-grid" id="cards">
+        <article class="card" data-cat="讨论">
+          <div class="meta"><span class="badge">讨论</span><span>上午更新</span></div>
+          <h3>一条长帖引发的观点分歧</h3>
+          <p>原帖围绕一个日常选择展开，评论区出现两种明显不同的看法。条目保留了双方的主要论据，方便对照阅读。</p>
+          <div class="foot"><span>关键词：观点分歧</span><span>热度较高</span></div>
+        </article>
+
+        <article class="card" data-cat="图片">
+          <div class="meta"><span class="badge">图片</span><span>中午更新</span></div>
+          <h3>被反复转发的几张截图</h3>
+          <p>截图内容本身信息量有限，转发时附带的说明版本不一。条目按时间顺序排列了流传较广的几种说法。</p>
+          <div class="foot"><span>关键词：转发截图</span><span>传播中</span></div>
+        </article>
+
+        <article class="card" data-cat="争议">
+          <div class="meta"><span class="badge">争议</span><span>下午更新</span></div>
+          <h3>评论区里的立场对撞</h3>
+          <p>同一件事被放在不同前提下讨论，结论自然不同。这里只记录讨论走向，不对是非作判断。</p>
+          <div class="foot"><span>关键词：立场对撞</span><span>仍在发酵</span></div>
+        </article>
+
+        <article class="card" data-cat="合集">
+          <div class="meta"><span class="badge">合集</span><span>傍晚更新</span></div>
+          <h3>同类话题的往期归集</h3>
+          <p>把近期结构相似的话题条目放在一起，便于看出讨论方式的变化，而不是只看单条内容。</p>
+          <div class="foot"><span>关键词：往期归集</span><span>已归档</span></div>
+        </article>
+
+        <article class="card" data-cat="讨论">
+          <div class="meta"><span class="badge">讨论</span><span>傍晚更新</span></div>
+          <h3>话题后续的补充说明</h3>
+          <p>原帖发布者在评论区做了补充，部分早期转述与补充内容存在出入，条目在末尾标注了这一变化。</p>
+          <div class="foot"><span>关键词：补充说明</span><span>已更新</span></div>
+        </article>
+
+        <article class="card" data-cat="图片">
+          <div class="meta"><span class="badge">图片</span><span>夜间更新</span></div>
+          <h3>视觉内容的来源核对</h3>
+          <p>部分图片缺少明确出处，条目对此单独标注为待确认，避免把不确定的信息当作结论。</p>
+          <div class="foot"><span>关键词：来源核对</span><span>待确认</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- READ -->
+  <section id="read" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap split">
+      <div class="article-flow">
+        <div class="sec-head">
+          <span class="tag">Reading Notes</span>
+          <h2>怎么读91每日大赛的内容</h2>
+        </div>
+        <h3>先看类别，再看时间</h3>
+        <p>91每日大赛的条目以类别和时间为两条主线。类别告诉你这是讨论、图片、争议还是合集，时间则说明它在当天讨论中出现的先后。先看类别可以迅速排除不感兴趣的部分，再看时间能判断一条内容是刚刚出现还是已经过几轮转述。</p>
+        <h3>区分原帖与转述</h3>
+        <p>热点内容在传播中容易被改写。条目里凡是来自原帖的说法，会尽量保留原有措辞；凡是转述，会说明来源层级。遇到多方说法不一致时，条目并列呈现，而不是挑一个看起来更顺的版本。</p>
+        <h3>热度不等于结论</h3>
+        <p>被讨论得多，只说明关注度高。91每日大赛在条目中标注热度，是为了帮助你安排阅读顺序，而不是替内容定性。对争议类条目，页面只记录讨论走向与主要论据，判断留给读者。</p>
+        <h3>归档便于回看</h3>
+        <p>同类话题会被归入合集。回看合集时，可以看到同一类讨论在不同日期里的表达差异，这比单看某一天的条目更有参考价值。</p>
+      </div>
+
+      <aside class="note-box">
+        <h3>阅读提示</h3>
+        <p>91每日大赛是内容归集型页面，条目用于快速了解当天被讨论的内容，不构成对任何事件的定论。</p>
+        <ul>
+          <li>图片类条目请留意来源标注，待确认内容不要直接引用。</li>
+          <li>争议类条目保留多方说法，阅读时注意前提差异。</li>
+          <li>合集条目适合横向对比，而非单条结论。</li>
+          <li>条目更新后，早期转述可能与最新内容不一致。</li>
+        </ul>
+        <div class="dl">
+          <a class="dl-btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1526" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/>
+            </svg>
+            下载
+          </a>
+          <span class="dl-hint">条目阅读包，入口待开放</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- HOWTO -->
+  <section id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Browsing Path</span>
+        <h2>从浏览到定位的四步</h2>
+        <p>访问91每日大赛时，多数人只想快速找到当天被讨论最多的那几条。下面这条路径按实际阅读习惯排列。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>看速览</h3>
+          <p>首屏速览给出当天条目的整体情况，先建立大致印象。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>按类别筛</h3>
+          <p>用标签按钮排除不关心的类型，缩小阅读范围。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>读关键词</h3>
+          <p>卡片底部关键词概括条目重点，可据此决定是否展开。</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <h3>回看合集</h3>
+          <p>同类话题进合集，横向对比后再形成自己的看法。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--paper-2);border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">FAQ</span>
+        <h2>关于91每日大赛的常见疑问</h2>
+        <p>以下问题来自读者最常提出的几类，回答只针对页面本身的内容组织方式。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>91每日大赛多久更新一次？</summary>
+          <p>条目按天组织，当天内容会在上午先更新一批，傍晚根据讨论变化补充或调整，夜间对来源不清的内容做标注。跨天的同类话题会进入合集。</p>
+        </details>
+        <details>
+          <summary>条目里的说法代表页面立场吗？</summary>
+          <p>不代表。条目记录的是当天的讨论内容与主要论据，争议类内容并列呈现多方说法，页面不对事件本身下结论。</p>
+        </details>
+        <details>
+          <summary>为什么有的图片标注“待确认”？</summary>
+          <p>因为该图片缺少可追溯的出处，或流传版本之间存在明显差异。标注是为了提醒读者在引用前自行核对，而不是暗示内容不可信。</p>
+        </details>
+        <details>
+          <summary>搜索框可以搜什么？</summary>
+          <p>可以输入条目标题、正文或关键词中的词，例如“讨论”“图片”“争议”。搜索与类别标签可以同时使用，结果会即时筛选。</p>
+        </details>
+        <details>
+          <summary>合集和当日条目有什么区别？</summary>
+          <p>当日条目按时间排列，适合了解今天发生了什么；合集按话题结构归集，适合观察同类讨论在不同日期的表达差异。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand-text">91每日大赛</div>
+        <p>91每日大赛以日期为线索归集当天被讨论的网络热点，按讨论、图片、争议、合集分类呈现，并提供关键词与类别筛选，帮助读者快速定位内容。</p>
+      </div>
+      <div class="foot-links">
+        <a href="#today">今日热点</a>
+        <a href="#list">内容条目</a>
+        <a href="#read">热点解读</a>
+        <a href="#howto">浏览方式</a>
+        <a href="#faq">常见疑问</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>91每日大赛 · 热点内容归集页</span>
+      <span>条目内容以原帖与公开讨论为准，仅供参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('q');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#cards .card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var activeCat = 'all';
+
+  function apply(){
+    var term = (input.value || '').trim().toLowerCase();
+    cards.forEach(function(c){
+      var cat = c.getAttribute('data-cat') || '';
+      var text = c.textContent.toLowerCase();
+      var okCat = activeCat === 'all' || cat === activeCat;
+      var okTerm = !term || text.indexOf(term) !== -1;
+      c.style.display = (okCat && okTerm) ? '' : 'none';
+    });
+  }
+
+  input.addEventListener('input', apply);
+
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      chips.forEach(function(b){ b.classList.remove('on'); });
+      btn.classList.add('on');
+      activeCat = btn.getAttribute('data-cat') || 'all';
+      apply();
+    });
+  });
+
+  // nav active state
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.main-nav a'));
+  navLinks.forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.forEach(function(x){ x.classList.remove('active'); });
+      a.classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>
